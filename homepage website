@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bean & Brew — Homepage Redesign (Desktop Mockup)</title>
+  <style>
+    /* ---------- Global ---------- */
+    :root{
+      --bg:#0f1720; --card:#111827; --muted:#9aa4b2; --accent:#ff6b35; --accent-2:#4dd0e1; --glass: rgba(255,255,255,0.04);
+      --max:1100px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#08101a 0%, #0b1217 60%); color:#e6eef6; min-height:100vh; display:flex; justify-content:center;}
+    .wrap{width:100%; max-width:var(--max); padding:40px 48px;}
+
+    /* ---------- Header / Nav ---------- */
+    header{display:flex; align-items:center; justify-content:space-between; gap:24px}
+    .brand{display:flex; align-items:center; gap:14px}
+    .logo{width:56px; height:56px; border-radius:10px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:20px; color:white; box-shadow:0 6px 18px rgba(0,0,0,0.5)}
+    nav{display:flex; gap:18px; align-items:center}
+    nav a{color:var(--muted); text-decoration:none; font-weight:600}
+    .cta{background:linear-gradient(90deg,var(--accent),#ff8a5a); padding:10px 16px; border-radius:10px; color:white; font-weight:700; text-decoration:none}
+
+    /* ---------- Main hero ---------- */
+    .hero{display:grid; grid-template-columns:1fr 420px; gap:36px; margin-top:28px; align-items:start}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:16px; padding:28px}
+    h1{font-size:40px; margin:0 0 12px 0; line-height:1.02}
+    .lede{color:var(--muted); max-width:60%;}
+
+    .hero-right{padding:18px; border-radius:12px; background:var(--card); box-shadow: 0 8px 30px rgba(2,6,23,0.6);}
+    .shop-image{width:100%; height:260px; border-radius:10px; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520"><rect width="100%" height="100%" fill="%230f1720"/><text x="50%" y="50%" font-family="Arial" font-size="28" fill="%23ffffff" text-anchor="middle">High-fidelity mockup preview image (placeholder)</text></svg>'); background-size:cover; background-position:center}
+
+    /* ---------- Feature strips ---------- */
+    .features{display:flex; gap:18px; margin-top:22px}
+    .feature{flex:1; padding:18px; border-radius:12px; background:var(--glass); border:1px solid rgba(255,255,255,0.03)}
+    .feature h3{margin:6px 0 8px}
+    .muted{color:var(--muted)}
+
+    /* ---------- Menu / Cards ---------- */
+    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:22px}
+    .product{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px; border-radius:12px}
+    .product .img{height:160px; border-radius:10px; background:linear-gradient(135deg,#2a2f38,#13161a); display:flex; align-items:center; justify-content:center; color:var(--muted);}
+
+    /* ---------- Wireframe area ---------- */
+    .wireframes{margin-top:34px}
+    .wf-row{display:flex; gap:16px}
+    .wf{flex:1; background:rgba(255,255,255,0.02); border:1px dashed rgba(255,255,255,0.06); padding:12px; border-radius:8px}
+    .wf .title{font-weight:700; margin-bottom:10px}
+    .wf svg{width:100%; height:220px; display:block}
+
+    /* ---------- Notes ---------- */
+    .notes{margin-top:22px; background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005)); padding:18px; border-radius:12px}
+    .notes h4{margin:0 0 8px}
+    .notes ul{margin:8px 0 0 18px; color:var(--muted)}
+
+    /* ---------- Footer ---------- */
+    footer{margin-top:42px; display:flex; justify-content:space-between; align-items:center; color:var(--muted); font-size:13px}
+
+    /* ---------- Desktop-only hint ---------- */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .grid{grid-template-columns:repeat(2,1fr)}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">B&amp;B</div>
+        <div>
+          <div style="font-weight:800;font-size:16px">Bean & Brew</div>
+          <div style="font-size:12px;color:var(--muted)">Artisanal coffee & cozy workspace</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#menu">Menu</a>
+        <a href="#order">Order</a>
+        <a href="#locations">Locations</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#reserve">Reserve Table</a>
+      </nav>
+    </header>
+
+    <!-- HERO: High-fidelity mockup representing the new homepage -->
+    <section class="hero">
+      <div class="card">
+        <h1>Freshly brewed. Thoughtfully designed.</h1>
+        <p class="lede">Bean & Brew's homepage redesigned to highlight today's specials, speed to order, and location discovery. Large visual hierarchy, clear calls-to-action, and accessible copy.</p>
+
+        <div class="features">
+          <div class="feature">
+            <strong>Quick Actions</strong>
+            <p class="muted">Order online, reserve a seat, or view today's roast from the top of the page.</p>
+          </div>
+          <div class="feature">
+            <strong>Prominent Specials</strong>
+            <p class="muted">Hero area shows daily deals with clear price and CTA.</p>
+          </div>
+          <div class="feature">
+            <strong>Location-first</strong>
+            <p class="muted">Easy store locator with hours & live status.</p>
+          </div>
+        </div>
+
+        <div class="grid" style="margin-top:18px">
+          <div class="product">
+            <div class="img">Signature Latte — Smooth & rich</div>
+            <h4 style="margin:12px 0 6px">Signature Latte</h4>
+            <p class="muted">Single origin espresso, velvety milk. 4.5 ★</p>
+          </div>
+          <div class="product">
+            <div class="img">Weekend Pastry — Freshly baked</div>
+            <h4 style="margin:12px 0 6px">Weekend Pastry</h4>
+            <p class="muted">Limited batches each Saturday. Order ahead.</p>
+          </div>
+          <div class="product">
+            <div class="img">Workspace — cozy corners</div>
+            <h4 style="margin:12px 0 6px">Workspace</h4>
+            <p class="muted">Free Wi‑Fi, power outlets, quiet hours.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <aside class="hero-right">
+        <div class="shop-image"></div>
+        <div style="display:flex; gap:12px; margin-top:12px; align-items:center">
+          <div style="flex:1">
+            <div style="font-weight:800">Order for pickup</div>
+            <div class="muted" style="font-size:13px">Pickup in 15–20 mins • Contactless</div>
+          </div>
+          <a class="cta" href="#order">Order Now</a>
+        </div>
+
+        <div style="margin-top:14px; display:flex; justify-content:space-between; gap:10px">
+          <div style="flex:1; padding:10px; border-radius:8px; background:rgba(255,255,255,0.02); text-align:center">
+            <div style="font-weight:700">4.7★</div>
+            <div class="muted">1.2k reviews</div>
+          </div>
+          <div style="flex:1; padding:10px; border-radius:8px; background:rgba(255,255,255,0.02); text-align:center">
+            <div style="font-weight:700">Open</div>
+            <div class="muted">8AM — 8PM</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ---------- Low-fidelity wireframes (three variations) ---------- -->
+    <section class="wireframes">
+      <h3 style="margin:0 0 12px">Low-fidelity wireframes — desktop variations</h3>
+      <div class="wf-row">
+        <div class="wf">
+          <div class="title">Wf 1 — Classic grid</div>
+          <!-- simple svg wireframe -->
+          <svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="6" width="788" height="60" stroke="#ffffff" fill="none" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="4 6"/>
+            <rect x="6" y="78" width="520" height="190" stroke="#ffffff" fill="none" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="6 6"/>
+            <rect x="538" y="78" width="256" height="90" stroke="#ffffff" fill="none" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="6 6"/>
+            <rect x="538" y="176" width="256" height="92" stroke="#ffffff" fill="none" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="6 6"/>
+            <text x="20" y="40" fill="#ffffff" opacity="0.7">Nav / Brand / CTA</text>
+            <text x="20" y="120" fill="#ffffff" opacity="0.7">Hero (image + headline)</text>
+            <text x="560" y="110" fill="#ffffff" opacity="0.7">Order panel</text>
+            <text x="560" y="210" fill="#ffffff" opacity="0.7">Quick facts</text>
+          </svg>
+        </div>
+        <div class="wf">
+          <div class="title">Wf 2 — Focused CTA</div>
+          <svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="6" width="788" height="60" stroke="#ffffff" fill="none" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="4 6"/>
+            <rect x="6" y="78" width="788" height="120" stroke="#ffffff" fill="none" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="6 6"/>
+            <rect x="6" y="206" width="390" height="90" stroke="#ffffff" fill="none" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="6 6"/>
+            <rect x="406" y="206" width="388" height="90" stroke="#ffffff" fill="none" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="6 6"/>
+            <text x="20" y="40" fill="#ffffff" opacity="0.7">Nav / Brand / CTA</text>
+            <text x="20" y="120" fill="#ffffff" opacity="0.7">Hero (center image + CTA)</text>
+            <text x="20" y="240" fill="#ffffff" opacity="0.7">Feature tiles</text>
+          </svg>
+        </div>
+        <div class="wf">
+          <div class="title">Wf 3 — Minimal + search</div>
+          <svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="6" width="788" height="60" stroke="#ffffff" fill="none" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="4 6"/>
+            <rect x="6" y="78" width="788" height="70" stroke="#ffffff" fill="none" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="6 6"/>
+            <rect x="6" y="160" width="788" height="116" stroke="#ffffff" fill="none" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="6 6"/>
+            <text x="20" y="40" fill="#ffffff" opacity="0.7">Nav / Brand / Search</text>
+            <text x="20" y="110" fill="#ffffff" opacity="0.7">Small hero with search box</text>
+            <text x="20" y="200" fill="#ffffff" opacity="0.7">Cards / Menu / CTA</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- Design notes & usability improvements ---------- -->
+    <section class="notes">
+      <h4>Deliverables included</h4>
+      <ul>
+        <li>Three low-fidelity wireframes (above) — compare layout choices for visual hierarchy and CTA placement.</li>
+        <li>High-fidelity desktop mockup (this page) with accessible typography, clear CTAs, and a focused ordering flow.</li>
+      </ul>
+
+      <h4 style="margin-top:12px">Usability changes & rationale</h4>
+      <ul>
+        <li><strong>Primary CTA above the fold:</strong> "Order Now" and "Reserve Table" placed in the top-right so returning users can act instantly.</li>
+        <li><strong>Visual hierarchy:</strong> Large headline + supporting lede and three feature tiles make purpose clear within 3 seconds.</li>
+        <li><strong>Faster conversions:</strong> Right-side order panel in hero reduces click depth to place an order.</li>
+        <li><strong>Scannability:</strong> Product cards with short descriptions and ratings help quick decisions; consistent padding and card shapes improve scanning.</li>
+        <li><strong>Mobile considerations:</strong> Simplify hero and stack content — provide condensed CTA and quick order button; maintain search & location prominence.</li>
+        <li><strong>Accessibility:</strong> Sufficient color contrast for text, semantic headings, touch-friendly CTA sizes (>=44px), and descriptive link labels.</li>
+      </ul>
+
+      <h4 style="margin-top:12px">How to use these files</h4>
+      <ul>
+        <li>The HTML in this page is a functional high-fidelity static mockup. You can open it in a desktop browser to review layout and copy.</li>
+        <li>Wireframes show alternative layout directions — pick one and I can produce pixel-perfect Figma/PNG screens or a responsive prototype next.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <div>© Bean & Brew • Redesigned — prototype</div>
+      <div class="muted">Notes: Desktop focused mockup • Accessible, fast, and goal-driven</div>
+    </footer>
+
+  </div>
+</body>
+</html>
