@@ -1,0 +1,1 @@
+The project includes the main HTML file for the website structure, a CSS file for styling and layout, an images folder containing all visuals used, and a high-fidelity redesign of the homepage based on the reference image.
